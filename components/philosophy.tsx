@@ -47,7 +47,7 @@ export function Philosophy() {
   return (
     <section
       ref={sectionRef}
-      id="filosofia"
+      id="credo"
       className="relative mx-auto max-w-6xl px-6 py-32"
     >
       <div
@@ -55,12 +55,15 @@ export function Philosophy() {
           visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
         }`}
       >
-        <p className="mb-3 font-mono text-xs tracking-[0.3em] text-primary uppercase">
-          04 / Filosofia
+        <p className="mb-3 font-mono text-xs tracking-[0.3em] text-primary uppercase text-center">
+          04 / Manifesto
         </p>
-        <h2 className="text-3xl font-bold text-foreground md:text-4xl text-balance">
-          Como eu penso software
+        <h2 className="text-3xl font-bold text-foreground md:text-4xl text-balance text-center">
+          Meu credo de desenvolvimento
         </h2>
+        <p className="mt-4 text-muted-foreground text-center max-w-2xl mx-auto">
+          Princípios que guiam minhas decisões técnicas e de design
+        </p>
       </div>
 
       <div className="grid grid-cols-1 gap-px bg-border md:grid-cols-2">
@@ -72,13 +75,13 @@ export function Philosophy() {
             }`}
             style={{ transitionDelay: visible ? `${index * 150}ms` : "0ms" }}
           >
-            <span className="mb-4 block font-mono text-xs text-primary">
+            <span className="mb-4 block font-mono text-sm font-bold text-primary">
               {principle.number}
             </span>
             <h3 className="mb-3 text-lg font-semibold text-foreground transition-colors group-hover:text-primary">
               {principle.title}
             </h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
+            <p className="text-sm text-muted-foreground leading-relaxed text-justify">
               {principle.description}
             </p>
           </div>

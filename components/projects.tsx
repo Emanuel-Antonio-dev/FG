@@ -226,7 +226,7 @@ function ProjectModal({
           <p className="mb-3 font-mono text-xs tracking-[0.2em] text-primary uppercase">
             Detalhes Técnicos
           </p>
-          <p className="text-sm text-muted-foreground leading-relaxed">{project.details}</p>
+          <p className="text-sm text-muted-foreground text-justify leading-relaxed">{project.details}</p>
         </div>
 
         {/* Links Section */}
@@ -270,6 +270,7 @@ function ProjectModal({
     </div>
   )
 }
+
 export function Projects() {
   const sectionRef = useRef<HTMLElement>(null)
   const scrollContainerRef = useRef<HTMLDivElement>(null)
@@ -368,8 +369,8 @@ export function Projects() {
             className="flex gap-6 overflow-x-auto scroll-smooth pb-4"
             style={{ 
               scrollBehavior: "smooth",
-              scrollbarWidth: "none", /* Firefox */
-              msOverflowStyle: "none" /* IE and Edge */
+              scrollbarWidth: "none",
+              msOverflowStyle: "none"
             }}
           >
             {projects.map((project, index) => (
@@ -383,35 +384,13 @@ export function Projects() {
                 }`}
                 style={{ transitionDelay: visible ? `${index * 100}ms` : "0ms" }}
               >
-                {/* Card Image Placeholder */}
-                <div className="relative h-48 w-full overflow-hidden bg-secondary">
-                  {project.images && project.images[0] ? (
-                    <img 
-                      src={project.images[0]} 
-                      alt={project.title}
-                      className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
-                  ) : (
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-center">
-                        <svg className="mx-auto mb-3 h-12 w-12 text-muted-foreground/30" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="m2.25 15.75 5.159-5.159a2.25 2.25 0 0 1 3.182 0l5.159 5.159m-1.5-1.5 1.409-1.409a2.25 2.25 0 0 1 3.182 0l2.909 2.909M3.75 21h16.5A2.25 2.25 0 0 0 22.5 18.75V5.25A2.25 2.25 0 0 0 20.25 3H3.75A2.25 2.25 0 0 0 1.5 5.25v13.5A2.25 2.25 0 0 0 3.75 21Z" />
-                        </svg>
-                        <p className="font-mono text-xs text-muted-foreground/30">Imagem do projeto</p>
-                      </div>
-                    </div>
-                  )}
-                  
-                  {/* Overlay gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                </div>
-
-                {/* Card Content */}
-                <div className="border-t border-border bg-card p-6 text-left">
-                  <h3 className="mb-2 text-lg font-bold text-foreground group-hover:text-primary transition-colors text-left">
+                {/* Card Content - Sem imagem */}
+                <div className="bg-card p-6 text-left min-h-[280px] flex flex-col">
+                  <h3 className="mb-3 text-lg font-bold text-foreground group-hover:text-primary transition-colors text-left">
                     {project.title}
                   </h3>
-                  <p className="mb-4 text-sm text-muted-foreground text-justify leading-relaxed line-clamp-3">
+                  
+                  <p className="mb-4 text-sm text-muted-foreground text-justify leading-relaxed line-clamp-4 flex-grow">
                     {project.description}
                   </p>
 
@@ -433,7 +412,7 @@ export function Projects() {
                   </div>
 
                   {/* Hover Action */}
-                  <div className="flex items-center gap-2 text-primary text-sm font-mono group-hover:translate-x-1 transition-transform">
+                  <div className="flex items-center gap-2 text-primary text-sm font-mono group-hover:translate-x-1 transition-transform mt-auto">
                     <span>Ver Detalhes</span>
                     <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
