@@ -12,7 +12,8 @@ import {
   Mail, 
   Sun, 
   Moon,
-  Code2 
+  Code2, 
+  MessageCircle
 } from "lucide-react"
 
 const navLinks = [
@@ -20,6 +21,8 @@ const navLinks = [
   { label: "Projetos", href: "#projetos", icon: FolderGit2 },
   { label: "Stack", href: "#stack", icon: Layers },
   { label: "Filosofia", href: "#filosofia", icon: Brain },
+  { label: "Serviços", href: "#servicos", icon: Code2 },
+  { label: "Depoimentos", href: "#depoimentos", icon: MessageCircle },
   { label: "Contato", href: "#contato", icon: Mail },
 ]
 

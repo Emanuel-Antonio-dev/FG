@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { Layers, Contact2 } from "lucide-react"
 
 const links = [
   {
@@ -56,24 +57,29 @@ export function Contact() {
       id="contato"
       className="relative mx-auto max-w-6xl px-6 py-32"
     >
-      <div className="flex flex-col gap-16 lg:flex-row lg:items-start lg:justify-between">
-        {/* Left */}
-        <div
-          className={`max-w-lg transition-all duration-1000 ${
-            visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-          }`}
-        >
-          <p className="mb-3 font-mono text-xs tracking-[0.3em] text-primary uppercase">
-            05 / Contato
-          </p>
-          <h2 className="mb-6 text-3xl font-bold text-foreground md:text-4xl text-balance">
-            Vamos construir algo juntos?
-          </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            Estou disponível para projetos freelance, consultoria em arquitetura
-            de software e oportunidades de trabalho remoto.
-          </p>
-        </div>
+<div className="flex flex-col gap-16 lg:flex-row lg:items-start lg:justify-between">
+  {/* Left */}
+  <div
+    className={`transition-all duration-1000 ${
+      visible ? "translate-x-0 opacity-100" : "-translate-x-8 opacity-0"
+    }`}
+  >
+    <div className="mb-12 sm:mb-16">
+      <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 border border-primary/20 px-3 py-1 mb-4">
+        <Contact2 className="h-3 w-3 text-primary" />
+        <span className="font-mono text-xs text-primary uppercase">07 / CONTACTOS</span>
+      </div>
+
+      <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-foreground text-balance">
+        Vamos construir algo juntos?
+      </h2>
+      
+      <p className="mt-4 text-muted-foreground max-w-2xl">
+        Estou disponível para projetos freelance, consultoria em arquitetura
+        de software e oportunidades de trabalho remoto.
+      </p>
+    </div>
+  </div>
 
         {/* Right - Links */}
         <div
