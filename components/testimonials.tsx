@@ -5,20 +5,20 @@ import { Star, Quote, MessageCircle } from "lucide-react"
 
 const testimonials = [
   {
-    name: "João Silva",
-    role: "CTO na TechCorp",
+    name: "Emanuel António",
+    role: "CTO nas Industrias Emaricar",
     content: "Trabalhar com ela foi uma experiência incrível. Código limpo, entregas no prazo e comunicação excepcional. Superou todas as expectativas.",
     rating: 5,
   },
   {
-    name: "Maria Santos",
+    name: "Formoza Manuel",
     role: "Product Manager na StartupX",
     content: "Profissional extremamente competente. Entendeu rapidamente as necessidades do projeto e entregou uma solução robusta e escalável.",
     rating: 5,
   },
   {
-    name: "Carlos Oliveira",
-    role: "Fundador da DevStudio",
+    name: "Gersia Nsiona",
+    role: "Fundadora da Nsiona Tech",
     content: "Uma das melhores desenvolvedoras com quem já trabalhei. Atenção aos detalhes e comprometimento com a qualidade impressionantes.",
     rating: 5,
   },
